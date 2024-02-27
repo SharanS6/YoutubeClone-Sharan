@@ -13,16 +13,17 @@ const PlayVideo = () => {
     return (
 
         <div className='play-video'>
-            <video src={video1} controls autoPlay></video>
+            <video src={video1} controls ></video>
             <h3>Best YouTube Channel To Learn Web Development</h3>
             <div className='play-video-info'>
                 <p>1521 View &bull; 2 days ago</p>
-            </div>
+            
             <div>
             <span><img src={like} />122</span>
             <span><img src={dislike} />1334</span>
             <span><img src={share} />105</span>
             <span><img src={save} />155</span>
+        </div>
         </div>
         <hr/>
         <div className="publisher">
@@ -34,8 +35,8 @@ const PlayVideo = () => {
             <button>Subscribe</button>
         </div>
         <div className="vid-description">
-            <p>chanel that makes Easy</p>
-            <p>Sibscriber GreatStack to watch More Tutorials</p>
+            <p>channel that makes Easy</p>
+            <p>Subscribe GreatStack to watch More Tutorials</p>
             <hr />
             <h4>130 comments</h4>
             <div className='Comment'>
@@ -43,6 +44,71 @@ const PlayVideo = () => {
                 <div>
                     <h3>Jack Nicholson <span>1 day ago</span></h3>
                 <p>This tutorial is an absolute gem for anyone diving into React Hooks! The instructor breaks down complex concepts into digestible chunks, making it easy to follow along even for beginners. </p>
+                <div className="comment-action">
+                    <img src={like} alt=""  />
+                    <span>244</span>
+                    <img src={dislike} alt="" />
+                </div>
+                </div>
+            </div>
+            <div className='Comment'>
+                <img src={profile}></img>
+                <div>
+                    <h3>Jack Nicholson <span>1 day ago</span></h3>
+                <p>This tutorial is an absolute gem for anyone diving into React Hooks! The instructor breaks down complex concepts into digestible chunks, making it easy to follow along even for beginners. </p>
+                <div className="comment-action">
+                    <img src={like} alt=""  />
+                    <span>244</span>
+                    <img src={dislike} alt="" />
+                </div>
+                </div>
+            </div>
+            <div className='Comment'>
+                <img src={profile}></img>
+                <div>
+                    <h3>Jack Nicholson <span>1 day ago</span></h3>
+                <p>This tutorial is an absolute gem for anyone diving into React Hooks! The instructor breaks down complex concepts into digestible chunks, making it easy to follow along even for beginners. </p>
+                <div className="comment-action">
+                    <img src={like} alt=""  />
+                    <span>244</span>
+                    <img src={dislike} alt="" />
+                </div>
+                </div>
+            </div>
+            <div className='Comment'>
+                <img src={profile}></img>
+                <div>
+                    <h3>Jack Nicholson <span>1 day ago</span></h3>
+                <p>This tutorial is an absolute gem for anyone diving into React Hooks! The instructor breaks down complex concepts into digestible chunks, making it easy to follow along even for beginners. </p>
+                <div className="comment-action">
+                    <img src={like} alt=""  />
+                    <span>244</span>
+                    <img src={dislike} alt="" />
+                </div>
+                </div>
+            </div>
+            <div className='Comment'>
+                <img src={profile}></img>
+                <div>
+                    <h3>Jack Nicholson <span>1 day ago</span></h3>
+                <p>This tutorial is an absolute gem for anyone diving into React Hooks! The instructor breaks down complex concepts into digestible chunks, making it easy to follow along even for beginners. </p>
+                <div className="comment-action">
+                    <img src={like} alt=""  />
+                    <span>244</span>
+                    <img src={dislike} alt="" />
+                </div>
+                </div>
+            </div>
+            <div className='Comment'>
+                <img src={profile}></img>
+                <div>
+                    <h3>Jack Nicholson <span>1 day ago</span></h3>
+                <p>This tutorial is an absolute gem for anyone diving into React Hooks! The instructor breaks down complex concepts into digestible chunks, making it easy to follow along even for beginners. </p>
+                <div className="comment-action">
+                    <img src={like} alt=""  />
+                    <span>244</span>
+                    <img src={dislike} alt="" />
+                </div>
                 </div>
             </div>
         </div>
