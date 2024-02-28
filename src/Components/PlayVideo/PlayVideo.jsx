@@ -29,13 +29,13 @@ const PlayVideo = ({videoId}) => {
             <iframe  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} title="Selected as Frontend Intern | HTML, CSS, and JavaScript | ProCodrr Mock Interviews" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <h3>{apiData?apiData.snippet.title:"Title Here"}</h3>
             <div className='play-video-info'>
-                <p>{apiData?value_converter(apiData.statistics.viewCount):"16K"} &bull; {moment(apiData.snippet.publishedAt).fromNow()}</p>
+                <p>{apiData?value_converter(apiData.statistics.viewCount):"16K"} &bull; {apiData?moment(apiData.snippet.publishedAt).fromNow():"2 days agp"}</p>
             
             <div>
-            <span><img src={like} />122</span>
-            <span><img src={dislike} />1334</span>
-            <span><img src={share} />105</span>
-            <span><img src={save} />155</span>
+            <span><img src={like} />{apiData?value_converter(apiData.statistics.likeCount):"160"}</span>
+            <span><img src={dislike} />101</span>
+            <span><img src={share} />Share</span>
+            <span><img src={save} />Save</span>
         </div>
         </div>
         <hr/>
