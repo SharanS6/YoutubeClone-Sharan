@@ -13,12 +13,17 @@ import moment from 'moment/moment'
 const PlayVideo = ({videoId}) => {
 
     const [apiData,setApiData]=useState(null);
+    const [channelData,setchannelData]=useState(null)
     const fetchVideoData=async()=>{
 
         const videoDetails_url=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
             await fetch(videoDetails_url).then(res=>res.json()).then(data=>setApiData(data.items[0]))
     }
-
+    const fetchOtherData=async ()=>{
+        const channeldata_url=`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
+        
+    }
+    
     useEffect(()=>{
         fetchVideoData()
     },[])
@@ -42,16 +47,15 @@ const PlayVideo = ({videoId}) => {
         <div className="publisher">
             <img src ={jack} alt=''></img>
             <div>
-                <p>GreatStack</p>
+                <p>{apiData?apiData.snippet.channelTitle:"Channel Title"}</p>
                 <span>1M subscribers</span>
             </div>
             <button>Subscribe</button>
         </div>
         <div className="vid-description">
-            <p>channel that makes Easy</p>
-            <p>Subscribe GreatStack to watch More Tutorials</p>
+            <p>{apiData?apiData.snippet.description.slice(0,250):"Description Here"}</p>
             <hr />
-            <h4>130 comments</h4>
+            <h4>{apiData?value_converter(apiData.statistics.commentCount):"140"}</h4>
             <div className='Comment'>
                 <img src={profile}></img>
                 <div>
